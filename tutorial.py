@@ -49,6 +49,10 @@ class GalateaTutorial(ModelSQL, ModelView):
         Website = Pool().get('galatea.website')
         return [p.id for p in Website.search([('registration','=',True)])]
 
+    @staticmethod
+    def default_comment():
+        return True
+
     @classmethod
     def __setup__(cls):
         super(GalateaTutorial, cls).__setup__()
