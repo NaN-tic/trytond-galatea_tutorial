@@ -6,7 +6,6 @@ from trytond.pool import Pool
 from trytond.transaction import Transaction
 from trytond.cache import Cache
 from .tools import slugify
-from datetime import datetime
 
 __all__ = ['GalateaTutorial', 'GalateaTutorialWebSite', 'GalateaTutorialComment']
 
@@ -94,7 +93,7 @@ class GalateaTutorial(ModelSQL, ModelView):
         slugs = {}
         for lang in langs:
             with Transaction().set_context(language=lang.code):
-                tutorial, = Tutorial.read([tutorial], ['slug'])
+                tutorial, = Tutorial.read([tutorial_id], ['slug'])
                 slugs[lang.code] = tutorial['slug']
 
         return slugs
