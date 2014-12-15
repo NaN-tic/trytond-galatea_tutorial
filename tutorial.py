@@ -54,7 +54,7 @@ class GalateaTutorial(ModelSQL, ModelView):
         super(GalateaTutorial, cls).__setup__()
         cls._order.insert(0, ('name', 'ASC'))
         cls._error_messages.update({
-            'delete_tutorial': ('You can not delete '
+            'delete_tutorials': ('You can not delete '
                 'tutorials because you will get error 404 NOT Found. '
                 'Dissable active field.'),
             })
