@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- This file is part galatea_tutorial of Tryton. The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tree string="Tutorials">
+    <field name="name"/>
+    <field name="slug"/>
+    <field name="websites" tree_invisible="1"/>
+    <field name="active" tree_invisible="1"/>
+</tree>

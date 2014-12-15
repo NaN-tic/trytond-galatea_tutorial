@@ -1,0 +1,329 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:galatea.tutorial:"
+msgid ""
+"You can not delete tutorials because you will get error 404 NOT Found. "
+"Dissable active field."
+msgstr ""
+"No pot eliminar tutorials perque obtindria una error 404 NOT Found. "
+"Desactiva'l."
+
+msgctxt "field:galatea.tutorial,active:"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "field:galatea.tutorial,attachments:"
+msgid "Attachments"
+msgstr "Adjunts"
+
+msgctxt "field:galatea.tutorial,comment:"
+msgid "Comment"
+msgstr "Comentari"
+
+msgctxt "field:galatea.tutorial,comments:"
+msgid "Comments"
+msgstr "Comentaris"
+
+msgctxt "field:galatea.tutorial,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:galatea.tutorial,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:galatea.tutorial,description:"
+msgid "Description"
+msgstr "Descripció"
+
+msgctxt "field:galatea.tutorial,gallery:"
+msgid "Gallery"
+msgstr "Galeria"
+
+msgctxt "field:galatea.tutorial,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galatea.tutorial,long_description:"
+msgid "Long Description"
+msgstr "Descripció llarga"
+
+msgctxt "field:galatea.tutorial,metadescription:"
+msgid "Meta Description"
+msgstr "Meta Description"
+
+msgctxt "field:galatea.tutorial,metakeywords:"
+msgid "Meta Keywords"
+msgstr "Meta Keywords"
+
+msgctxt "field:galatea.tutorial,metatitle:"
+msgid "Meta Title"
+msgstr "Meta Title"
+
+msgctxt "field:galatea.tutorial,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:galatea.tutorial,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:galatea.tutorial,slug:"
+msgid "slug"
+msgstr "slug"
+
+msgctxt "field:galatea.tutorial,slug_langs:"
+msgid "Slug Langs"
+msgstr "Slug idiomes"
+
+msgctxt "field:galatea.tutorial,websites:"
+msgid "Websites"
+msgstr "Llocs web"
+
+msgctxt "field:galatea.tutorial,write_date:"
+msgid "Write Date"
+msgstr "Usuari creació"
+
+msgctxt "field:galatea.tutorial,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:galatea.tutorial-galatea.website,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:galatea.tutorial-galatea.website,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:galatea.tutorial-galatea.website,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galatea.tutorial-galatea.website,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:galatea.tutorial-galatea.website,tutorial:"
+msgid "Tutorial"
+msgstr "Tutorial"
+
+msgctxt "field:galatea.tutorial-galatea.website,website:"
+msgid "Website"
+msgstr "Lloc web"
+
+msgctxt "field:galatea.tutorial-galatea.website,write_date:"
+msgid "Write Date"
+msgstr "Usuari creació"
+
+msgctxt "field:galatea.tutorial-galatea.website,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:galatea.tutorial.comment,active:"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "field:galatea.tutorial.comment,comment_create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:galatea.tutorial.comment,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:galatea.tutorial.comment,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:galatea.tutorial.comment,description:"
+msgid "Description"
+msgstr "Descripció"
+
+msgctxt "field:galatea.tutorial.comment,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galatea.tutorial.comment,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:galatea.tutorial.comment,tutorial:"
+msgid "Tutorial"
+msgstr "Tutorial"
+
+msgctxt "field:galatea.tutorial.comment,user:"
+msgid "User"
+msgstr "Usuari"
+
+msgctxt "field:galatea.tutorial.comment,write_date:"
+msgid "Write Date"
+msgstr "Usuari creació"
+
+msgctxt "field:galatea.tutorial.comment,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:galatea.website,tutorial_anonymous:"
+msgid "Tutorial Anonymous"
+msgstr "Tutorial anònims"
+
+msgctxt "field:galatea.website,tutorial_anonymous_user:"
+msgid "Tutorial Anonymous User"
+msgstr "Tutorial usuaris anònims"
+
+msgctxt "field:galatea.website,tutorial_comment:"
+msgid "Tutorial Comments"
+msgstr "Tutorial comentarios"
+
+msgctxt "help:galatea.tutorial,active:"
+msgid "Dissable to not show content tutorial."
+msgstr "Desactivar per no mostrar el contingut del tutorial."
+
+msgctxt "help:galatea.tutorial,comment:"
+msgid "Active comments."
+msgstr "Activar comentaris."
+
+msgctxt "help:galatea.tutorial,description:"
+msgid ""
+"You could write wiki markup to create html content. Formats text following "
+"the MediaWiki (http://meta.wikimedia.org/wiki/Help:Editing) syntax."
+msgstr ""
+"Pot escriure amb els tags de wiki per formatejar contingut HTML. Pot "
+"consultar la xuleta a MediaWiki "
+"(http://meta.wikimedia.org/wiki/Help:Editing)."
+
+msgctxt "help:galatea.tutorial,gallery:"
+msgid "Active gallery attachments."
+msgstr "Activar adjunts galeria."
+
+msgctxt "help:galatea.tutorial,long_description:"
+msgid ""
+"You could write wiki markup to create html content. Formats text following "
+"the MediaWiki (http://meta.wikimedia.org/wiki/Help:Editing) syntax."
+msgstr ""
+"Pot escriure amb els tags de wiki per formatejar contingut HTML. Pot "
+"consultar la xuleta a MediaWiki "
+"(http://meta.wikimedia.org/wiki/Help:Editing)."
+
+msgctxt "help:galatea.tutorial,metadescription:"
+msgid ""
+"Almost all search engines recommend it to be shorter than 155 characters of "
+"plain text"
+msgstr ""
+"La majoría dels cercadors recomanen un text de 155 caràcters de text pla."
+
+msgctxt "help:galatea.tutorial,metakeywords:"
+msgid "Separated by comma"
+msgstr "Separat amb coma."
+
+msgctxt "help:galatea.tutorial,slug:"
+msgid "Cannonical uri."
+msgstr "Cannonical uri."
+
+msgctxt "help:galatea.tutorial,websites:"
+msgid "Tutorial will be available in those websites"
+msgstr "Tutorial disponible en els llocs web."
+
+msgctxt "help:galatea.tutorial.comment,active:"
+msgid "Dissable to not show content tutorial."
+msgstr "Desactivar per no mostrar el contingut del tutorial."
+
+msgctxt "help:galatea.tutorial.comment,description:"
+msgid ""
+"You could write wiki markup to create html content. Formats text following "
+"the MediaWiki (http://meta.wikimedia.org/wiki/Help:Editing) syntax."
+msgstr ""
+"Pot escriure amb els tags de wiki per formatejar contingut HTML. Pot "
+"consultar la xuleta a MediaWiki "
+"(http://meta.wikimedia.org/wiki/Help:Editing)."
+
+msgctxt "help:galatea.website,tutorial_anonymous:"
+msgid "Active user anonymous to publish comments."
+msgstr "Activar usuaris anònims per publicar comentaris."
+
+msgctxt "help:galatea.website,tutorial_comment:"
+msgid "Active tutorial comments."
+msgstr "Activar comentaris en els tutorials."
+
+msgctxt "model:galatea.tutorial,name:"
+msgid "Galatea Tutorial"
+msgstr "Galatea Tutorial"
+
+msgctxt "model:galatea.tutorial-galatea.website,name:"
+msgid "Galatea Tutorial - Website"
+msgstr "Galatea Tutorial - Lloc Web"
+
+msgctxt "model:galatea.tutorial.comment,name:"
+msgid "Galatea Tutorial Comment"
+msgstr "Galatea Tutorial Comentari"
+
+msgctxt "model:ir.action,name:act_tutorial_comment_form"
+msgid "Comments"
+msgstr "Comentaris"
+
+msgctxt "model:ir.action,name:act_tutorial_comment_form2"
+msgid "Comments"
+msgstr "Comentaris"
+
+msgctxt "model:ir.action,name:act_tutorial_form"
+msgid "Tutorials"
+msgstr "Tutoriales"
+
+msgctxt "model:ir.ui.menu,name:menu_galatea_tutorial"
+msgid "Tutorial"
+msgstr "Tutorial"
+
+msgctxt "model:ir.ui.menu,name:menu_tutorial_comment_form"
+msgid "Comments"
+msgstr "Comentaris"
+
+msgctxt "model:ir.ui.menu,name:menu_tutorial_form"
+msgid "Tutorials"
+msgstr "Tutoriales"
+
+msgctxt "model:res.group,name:group_galatea_tutorial"
+msgid "Galatea Tutorial"
+msgstr "Galatea Tutorial"
+
+msgctxt "view:galatea.tutorial.comment:"
+msgid "Comment"
+msgstr "Comentari"
+
+msgctxt "view:galatea.tutorial.comment:"
+msgid "Comments"
+msgstr "Comentaris"
+
+msgctxt "view:galatea.tutorial.comment:"
+msgid "Description"
+msgstr "Descripció"
+
+msgctxt "view:galatea.tutorial:"
+msgid "Attachments"
+msgstr "Adjunts"
+
+msgctxt "view:galatea.tutorial:"
+msgid "Descriptions"
+msgstr "Descripcions"
+
+msgctxt "view:galatea.tutorial:"
+msgid "Extra"
+msgstr "Extra"
+
+msgctxt "view:galatea.tutorial:"
+msgid "SEO"
+msgstr "SEO"
+
+msgctxt "view:galatea.tutorial:"
+msgid "Tutorial"
+msgstr "Tutorial"
+
+msgctxt "view:galatea.tutorial:"
+msgid "Tutorials"
+msgstr "Tutoriales"
+
+msgctxt "view:galatea.tutorial:"
+msgid "Websites"
+msgstr "Llocs web"

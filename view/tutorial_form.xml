@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!-- This file is part galatea_tutorial of Tryton. The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form string="Tutorial">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="slug"/>
+    <field name="slug"/>
+    <label name="active"/>
+    <field name="active"/>
+    <notebook colspan="4">
+        <page string="Descriptions" id="descriptions">
+            <field name="description" colspan="4"/>
+            <separator name="long_description" colspan="4"/>
+            <field name="long_description" colspan="4"/>
+        </page>
+        <page string="SEO" id="seo">
+            <label name="metadescription"/>
+            <field name="metadescription"/><newline/>
+            <label name="metakeywords"/>
+            <field name="metakeywords"/><newline/>
+            <label name="metatitle"/>
+            <field name="metatitle"/><newline/>
+        </page>
+        <page string="Extra" id="extra">
+            <label name="gallery"/>
+            <field name="gallery"/>
+            <label name="comment"/>
+            <field name="comment"/>
+        </page>
+        <page string="Websites" id="websites">
+            <field name="websites" colspan="6"/>
+        </page>
+        <page string="Attachments" id="attachments">
+            <field name="attachments" colspan="6"/>
+        </page>
+    </notebook>
+</form>

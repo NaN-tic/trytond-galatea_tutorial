@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tryton>
+    <data>
+        <record model="res.group" id="group_galatea_tutorial">
+            <field name="name">Galatea Tutorial</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_galatea_tutorial">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_galatea_tutorial"/>
+        </record>
+
+        <menuitem id="menu_galatea_tutorial" parent="galatea.menu_galatea" name="Tutorial"/>
+        <record model="ir.ui.menu-res.group" id="menu_group_galatea_tutorial">
+            <field name="menu" ref="menu_galatea_tutorial"/>
+            <field name="group" ref="group_galatea_tutorial"/>
+        </record>
+
+        <!-- galatea.tutorial -->
+        <record model="ir.ui.view" id="tutorial_view_form">
+            <field name="model">galatea.tutorial</field>
+            <field name="type">form</field>
+            <field name="name">tutorial_form</field>
+        </record>
+        <record model="ir.ui.view" id="tutorial_view_tree">
+            <field name="model">galatea.tutorial</field>
+            <field name="type">tree</field>
+            <field name="name">tutorial_tree</field>
+        </record>
+
+        <!-- Actions / Menu -->
+        <record model="ir.action.act_window" id="act_tutorial_form">
+            <field name="name">Tutorials</field>
+            <field name="res_model">galatea.tutorial</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tutorial_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="tutorial_view_tree"/>
+            <field name="act_window" ref="act_tutorial_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tutorial_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="tutorial_view_form"/>
+            <field name="act_window" ref="act_tutorial_form"/>
+        </record>
+        <menuitem parent="menu_galatea_tutorial" action="act_tutorial_form"
+            id="menu_tutorial_form"/>
+
+        <!-- Action Tutorial to Comments -->
+        <record model="ir.action.act_window" id="act_tutorial_comment_form2">
+            <field name="name">Comments</field>
+            <field name="res_model">galatea.tutorial.comment</field>
+            <field name="domain">[("tutorial", 'in', Eval('active_ids'))]</field>
+        </record>
+        <record model="ir.action.keyword" id="act_open_tutorial_post_comment_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">galatea.tutorial,-1</field>
+            <field name="action" ref="act_tutorial_comment_form2"/>
+        </record>
+
+        <!-- galatea.tutorial.comment -->
+        <record model="ir.ui.view" id="tutorial_comment_view_form">
+            <field name="model">galatea.tutorial.comment</field>
+            <field name="type">form</field>
+            <field name="name">comment_form</field>
+        </record>
+        <record model="ir.ui.view" id="tutorial_comment_view_tree">
+            <field name="model">galatea.tutorial.comment</field>
+            <field name="type">tree</field>
+            <field name="name">comment_tree</field>
+        </record>
+
+        <!-- Actions / Menu -->
+        <record model="ir.action.act_window" id="act_tutorial_comment_form">
+            <field name="name">Comments</field>
+            <field name="res_model">galatea.tutorial.comment</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tutorial_comment_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="tutorial_comment_view_tree"/>
+            <field name="act_window" ref="act_tutorial_comment_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_tutorial_comment_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="tutorial_comment_view_form"/>
+            <field name="act_window" ref="act_tutorial_comment_form"/>
+        </record>
+        <menuitem parent="menu_galatea_tutorial" action="act_tutorial_comment_form"
+            id="menu_tutorial_comment_form"/>
+
+        <!-- Access -->
+        <record model="ir.model.access" id="access_group_galatea_tutorial">
+            <field name="model" search="[('model', '=', 'galatea.tutorial')]"/>
+            <field name="group" ref="group_galatea_tutorial"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_galatea_tutorial">
+            <field name="model" search="[('model', '=', 'galatea.tutorial')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_group_galatea_tutorial_comment">
+            <field name="model" search="[('model', '=', 'galatea.tutorial.comment')]"/>
+            <field name="group" ref="group_galatea_tutorial"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_galatea_tutorial_comment">
+            <field name="model" search="[('model', '=', 'galatea.tutorial.comment')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+    </data>
+</tryton>
