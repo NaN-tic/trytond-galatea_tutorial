@@ -78,6 +78,10 @@ msgctxt "field:galatea.tutorial,slug_langs:"
 msgid "Slug Langs"
 msgstr "Slug idiomas"
 
+msgctxt "field:galatea.tutorial,user:"
+msgid "User"
+msgstr "Usuario"
+
 msgctxt "field:galatea.tutorial,websites:"
 msgid "Websites"
 msgstr "Sitios web"
@@ -243,7 +247,7 @@ msgstr ""
 
 msgctxt "help:galatea.website,tutorial_anonymous:"
 msgid "Active user anonymous to publish comments."
-msgstr "Activar usuarios anónimos en publicar comentaios."
+msgstr "Activar usuarios anónimos en publicar comentarios."
 
 msgctxt "help:galatea.website,tutorial_comment:"
 msgid "Active tutorial comments."

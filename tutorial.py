@@ -31,6 +31,7 @@ class GalateaTutorial(ModelSQL, ModelView):
     metatitle = fields.Char('Meta Title',  translate=True)
     active = fields.Boolean('Active',
         help='Dissable to not show content tutorial.')
+    user = fields.Many2One('galatea.user', 'User', required=True)
     websites = fields.Many2Many('galatea.tutorial-galatea.website', 
         'tutorial', 'website', 'Websites',
         help='Tutorial will be available in those websites')
@@ -52,6 +53,17 @@ class GalateaTutorial(ModelSQL, ModelView):
     @staticmethod
     def default_comment():
         return True
+
+    @classmethod
+    def default_user(cls):
+        Website = Pool().get('galatea.website')
+        websites = Website.search([('active', '=', True)], limit=1)
+        if not websites:
+            return None
+        website, = websites
+        if website.tutorial_anonymous_user:
+            return website.tutorial_anonymous_user.id
+        return None
 
     @classmethod
     def __setup__(cls):
@@ -139,10 +151,13 @@ class GalateaTutorialComment(ModelSQL, ModelView):
     @classmethod
     def default_user(cls):
         Website = Pool().get('galatea.website')
-        websites = Website.search([('active', '=', True)])
-        if len(websites) == 1:
-            if websites[0].tutorial_anonymous_user:
-                return websites[0].tutorial_anonymous_user.id
+        websites = Website.search([('active', '=', True)], limit=1)
+        if not websites:
+            return None
+        website, = websites
+        if website.tutorial_anonymous_user:
+            return website.tutorial_anonymous_user.id
+        return None
 
     @classmethod
     def get_comment_create_date(cls, records, name):

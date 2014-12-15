@@ -8,6 +8,8 @@ this repository contains the full copyright notices and license terms. -->
     <field name="slug"/>
     <label name="active"/>
     <field name="active"/>
+    <label name="user"/>
+    <field name="user"/>
     <notebook colspan="4">
         <page string="Descriptions" id="descriptions">
             <field name="description" colspan="4"/>

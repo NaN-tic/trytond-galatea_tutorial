@@ -78,6 +78,10 @@ msgctxt "field:galatea.tutorial,slug_langs:"
 msgid "Slug Langs"
 msgstr "Slug idiomes"
 
+msgctxt "field:galatea.tutorial,user:"
+msgid "User"
+msgstr "Usuari"
+
 msgctxt "field:galatea.tutorial,websites:"
 msgid "Websites"
 msgstr "Llocs web"
@@ -213,7 +217,7 @@ msgid ""
 "Almost all search engines recommend it to be shorter than 155 characters of "
 "plain text"
 msgstr ""
-"La majoría dels cercadors recomanen un text de 155 caràcters de text pla."
+"La majoria dels cercadors recomanen un text de 155 caràcters de text pla."
 
 msgctxt "help:galatea.tutorial,metakeywords:"
 msgid "Separated by comma"
@@ -270,7 +274,7 @@ msgstr "Comentaris"
 
 msgctxt "model:ir.action,name:act_tutorial_form"
 msgid "Tutorials"
-msgstr "Tutoriales"
+msgstr "Tutorials"
 
 msgctxt "model:ir.ui.menu,name:menu_galatea_tutorial"
 msgid "Tutorial"
@@ -282,7 +286,7 @@ msgstr "Comentaris"
 
 msgctxt "model:ir.ui.menu,name:menu_tutorial_form"
 msgid "Tutorials"
-msgstr "Tutoriales"
+msgstr "Tutorials"
 
 msgctxt "model:res.group,name:group_galatea_tutorial"
 msgid "Galatea Tutorial"
@@ -322,7 +326,7 @@ msgstr "Tutorial"
 
 msgctxt "view:galatea.tutorial:"
 msgid "Tutorials"
-msgstr "Tutoriales"
+msgstr "Tutorials"
 
 msgctxt "view:galatea.tutorial:"
 msgid "Websites"
