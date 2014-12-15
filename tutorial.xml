@@ -51,7 +51,7 @@
             <field name="res_model">galatea.tutorial.comment</field>
             <field name="domain">[("tutorial", 'in', Eval('active_ids'))]</field>
         </record>
-        <record model="ir.action.keyword" id="act_open_tutorial_post_comment_keyword1">
+        <record model="ir.action.keyword" id="act_open_tutorial_comment_keyword1">
             <field name="keyword">form_relate</field>
             <field name="model">galatea.tutorial,-1</field>
             <field name="action" ref="act_tutorial_comment_form2"/>
