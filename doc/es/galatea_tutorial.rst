@@ -53,4 +53,18 @@ Para acceder a todos los tutoriales accede a:
 * Catalan: http://www.midominio.com/ca/tutorial/
 * Inglés: http://www.midominio.com/en/tutorial/
 
+.. inheritref:: galatea_photoalbum/galatea:section:tutoriales_tematicos
+
+Tutoriales temáticos
+--------------------
+
+Mediante palabras clave puede crear tutoriales por temática. Según la palabra clave
+se listarán otras fotografias relacionadas con la misma palabra.
+
+Para acceder a todos los photoalbumes accede a:
+
+* Español: http://www.midominio.com/es/tutorial/key/<KEY>
+* Catalan: http://www.midominio.com/ca/tutorial/key/<KEY>
+* Inglés: http://www.midominio.com/en/tutorial/key/<KEY>
+
 .. |menu_galatea_tutorial| tryref:: galatea_tutorial.menu_galatea_tutorial/complete_name
