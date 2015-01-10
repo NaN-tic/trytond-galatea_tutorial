@@ -31,6 +31,11 @@ class GalateaTutorial(ModelSQL, ModelView):
     metatitle = fields.Char('Meta Title',  translate=True)
     active = fields.Boolean('Active',
         help='Dissable to not show content tutorial.')
+    visibility = fields.Selection([
+            ('public','Public'),
+            ('register','Register'),
+            ('manager','Manager'),
+            ], 'Visibility', required=True)
     user = fields.Many2One('galatea.user', 'User', required=True)
     websites = fields.Many2Many('galatea.tutorial-galatea.website', 
         'tutorial', 'website', 'Websites',
@@ -44,6 +49,10 @@ class GalateaTutorial(ModelSQL, ModelView):
     @staticmethod
     def default_active():
         return True
+
+    @staticmethod
+    def default_visibility():
+        return 'public'
 
     @staticmethod
     def default_websites():
