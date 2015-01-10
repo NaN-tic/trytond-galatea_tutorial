@@ -82,6 +82,10 @@ msgctxt "field:galatea.tutorial,user:"
 msgid "User"
 msgstr "Usuario"
 
+msgctxt "field:galatea.tutorial,visibility:"
+msgid "Visibility"
+msgstr "Visibilidad"
+
 msgctxt "field:galatea.tutorial,websites:"
 msgid "Websites"
 msgstr "Sitios web"
@@ -292,6 +296,18 @@ msgstr "Tutoriales"
 msgctxt "model:res.group,name:group_galatea_tutorial"
 msgid "Galatea Tutorial"
 msgstr "Galatea Tutorial"
+
+msgctxt "selection:galatea.tutorial,visibility:"
+msgid "Manager"
+msgstr "Gestor"
+
+msgctxt "selection:galatea.tutorial,visibility:"
+msgid "Public"
+msgstr "Público"
+
+msgctxt "selection:galatea.tutorial,visibility:"
+msgid "Register"
+msgstr "Registrado"
 
 msgctxt "view:galatea.tutorial.comment:"
 msgid "Comment"
