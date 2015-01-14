@@ -4,6 +4,7 @@ this repository contains the full copyright notices and license terms. -->
 <tree string="Tutorials">
     <field name="name"/>
     <field name="slug"/>
+    <field name="tutorial_create_date"/>
     <field name="user"/>
     <field name="visibility"/>
     <field name="websites" tree_invisible="1"/>

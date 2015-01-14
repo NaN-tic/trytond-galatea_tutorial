@@ -6,6 +6,7 @@ from trytond.pool import Pool
 from trytond.transaction import Transaction
 from trytond.cache import Cache
 from .tools import slugify
+from datetime import datetime
 
 __all__ = ['GalateaTutorial', 'GalateaTutorialWebSite', 'GalateaTutorialComment']
 
@@ -36,6 +37,8 @@ class GalateaTutorial(ModelSQL, ModelView):
             ('register','Register'),
             ('manager','Manager'),
             ], 'Visibility', required=True)
+    tutorial_create_date = fields.DateTime('Create Date', readonly=True)
+    tutorial_write_date = fields.DateTime('Write Date', readonly=True)
     user = fields.Many2One('galatea.user', 'User', required=True)
     websites = fields.Many2Many('galatea.tutorial-galatea.website', 
         'tutorial', 'website', 'Websites',
@@ -77,7 +80,8 @@ class GalateaTutorial(ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super(GalateaTutorial, cls).__setup__()
-        cls._order.insert(0, ('name', 'ASC'))
+        cls._order.insert(0, ('tutorial_create_date', 'DESC'))
+        cls._order.insert(1, ('name', 'ASC'))
         cls._error_messages.update({
             'delete_tutorials': ('You can not delete '
                 'tutorials because you will get error 404 NOT Found. '
@@ -89,6 +93,27 @@ class GalateaTutorial(ModelSQL, ModelView):
         if self.name and not self.slug:
             res['slug'] = slugify(self.name)
         return res
+
+    @classmethod
+    def create(cls, vlist):
+        now = datetime.now()
+        vlist = [x.copy() for x in vlist]
+        for vals in vlist:
+            vals['tutorial_create_date'] = now
+        photos = super(GalateaTutorial, cls).create(vlist)
+        return photos
+
+    @classmethod
+    def write(cls, *args):
+        now = datetime.now()
+
+        actions = iter(args)
+        args = []
+        for photos, values in zip(actions, actions):
+            values = values.copy()
+            values['tutorial_write_date'] = now
+            args.extend((photos, values))
+        return super(GalateaTutorial, cls).write(*args)
 
     @classmethod
     def copy(cls, tutorials, default=None):
