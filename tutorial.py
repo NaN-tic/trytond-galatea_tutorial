@@ -46,6 +46,8 @@ class GalateaTutorial(ModelSQL, ModelView):
     gallery = fields.Boolean('Gallery', help='Active gallery attachments.')
     comment = fields.Boolean('Comment', help='Active comments.')
     comments = fields.One2Many('galatea.tutorial.comment', 'tutorial', 'Comments')
+    total_comments = fields.Function(fields.Integer("Total Comments"),
+        'get_totalcomments')
     attachments = fields.One2Many('ir.attachment', 'resource', 'Attachments')
     _slug_langs_cache = Cache('galatea_tutorial.slug_langs')
 
@@ -147,6 +149,9 @@ class GalateaTutorial(ModelSQL, ModelView):
                 slugs[lang.code] = tutorial['slug']
 
         return slugs
+
+    def get_totalcomments(self, name):
+        return len(self.comments)
 
 
 class GalateaTutorialWebSite(ModelSQL):
