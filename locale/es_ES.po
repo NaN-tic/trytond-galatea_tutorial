@@ -188,15 +188,15 @@ msgstr "Usuario modificación"
 
 msgctxt "field:galatea.website,tutorial_anonymous:"
 msgid "Tutorial Anonymous"
-msgstr "Tutorial anónimos"
+msgstr "Tutorial anónimo"
 
 msgctxt "field:galatea.website,tutorial_anonymous_user:"
 msgid "Tutorial Anonymous User"
-msgstr "Tutorial usuarios anónimos"
+msgstr "Tutorial usuario anónimo"
 
 msgctxt "field:galatea.website,tutorial_comment:"
 msgid "Tutorial Comments"
-msgstr "Tutorial comentarios"
+msgstr "Comentarios tutorial"
 
 msgctxt "help:galatea.tutorial,active:"
 msgid "Dissable to not show content tutorial."
@@ -360,3 +360,7 @@ msgstr "Tutoriales"
 msgctxt "view:galatea.tutorial:"
 msgid "Websites"
 msgstr "Sitios web"
+
+msgctxt "view:galatea.website:"
+msgid "Tutorial"
+msgstr "Tutorial"

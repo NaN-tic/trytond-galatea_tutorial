@@ -3,12 +3,14 @@
 The COPYRIGHT file at the top level of this repository contains the full
 copyright notices and license types. -->
 <data>
-    <xpath expr="/form/notebook/page[@id=&quot;configuration&quot;]" position="inside">
-        <label name="tutorial_comment"/>
-        <field name="tutorial_comment"/>
-        <label name="tutorial_anonymous"/>
-        <field name="tutorial_anonymous"/>
-        <label name="tutorial_anonymous_user"/>
-        <field name="tutorial_anonymous_user"/>
+    <xpath expr="/form/notebook/page[@id=&quot;configuration&quot;]" position="after">
+        <page id="tutorial" string="Tutorial">
+            <label name="tutorial_comment"/>
+            <field name="tutorial_comment"/>
+            <label name="tutorial_anonymous"/>
+            <field name="tutorial_anonymous"/>
+            <label name="tutorial_anonymous_user"/>
+            <field name="tutorial_anonymous_user"/>
+        </page>
     </xpath>
 </data>
