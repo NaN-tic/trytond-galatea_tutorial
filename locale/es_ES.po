@@ -78,6 +78,10 @@ msgctxt "field:galatea.tutorial,slug_langs:"
 msgid "Slug Langs"
 msgstr "Slug idiomas"
 
+msgctxt "field:galatea.tutorial,total_comments:"
+msgid "Total Comments"
+msgstr "Total comentarios"
+
 msgctxt "field:galatea.tutorial,tutorial_create_date:"
 msgid "Create Date"
 msgstr "Fecha creación"
