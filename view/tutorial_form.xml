@@ -40,6 +40,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="websites" colspan="6"/>
         </page>
         <page string="Attachments" id="attachments">
+            <label name="thumb"/>
+            <field name="thumb"/>
+            <field name="thumb_filename" invisible="1"/>
             <field name="attachments" colspan="6"/>
         </page>
     </notebook>

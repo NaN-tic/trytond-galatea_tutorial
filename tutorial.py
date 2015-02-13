@@ -1,12 +1,16 @@
 # This file is part galatea_tutorial module for Tryton.
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
+from mimetypes import guess_type
+from datetime import datetime
+import os
+import hashlib
 from trytond.model import ModelSQL, ModelView, fields
 from trytond.pool import Pool
 from trytond.transaction import Transaction
 from trytond.cache import Cache
-from .tools import slugify
-from datetime import datetime
+from trytond.config import config
+from trytond.modules.galatea.tools import slugify, IMAGE_TYPES, thumbly
 
 __all__ = ['GalateaTutorial', 'GalateaTutorialWebSite', 'GalateaTutorialComment']
 
@@ -49,6 +53,11 @@ class GalateaTutorial(ModelSQL, ModelView):
     total_comments = fields.Function(fields.Integer("Total Comments"),
         'get_totalcomments')
     attachments = fields.One2Many('ir.attachment', 'resource', 'Attachments')
+    thumb = fields.Function(fields.Binary('Thumb', filename='thumb_filename'),
+        'get_thumb', setter='set_thumb')
+    thumb_filename = fields.Char('File Name',
+        help='Thumbnail File Name')
+    thumb_path = fields.Function(fields.Char('Thumb Path'), 'get_thumb_path')
     _slug_langs_cache = Cache('galatea_tutorial.slug_langs')
 
     @staticmethod
@@ -88,6 +97,10 @@ class GalateaTutorial(ModelSQL, ModelView):
             'delete_tutorials': ('You can not delete '
                 'tutorials because you will get error 404 NOT Found. '
                 'Dissable active field.'),
+            'not_file_mime': ('Not know file mime "%(file_name)s"'),
+            'not_file_mime_image': ('"%(file_name)s" file mime is not an image ' \
+                '(jpg, png or gif)'),
+            'image_size': ('Thumb "%(file_name)s" size is larger than "%(size)s"Kb'),
             })
 
     def on_change_name(self):
@@ -152,6 +165,70 @@ class GalateaTutorial(ModelSQL, ModelView):
 
     def get_totalcomments(self, name):
         return len(self.comments)
+
+    def get_thumb(self, name):
+        db_name = Transaction().cursor.dbname
+        filename = self.thumb_filename
+        if not filename:
+            return None
+        filename = os.path.join(config.get('database', 'path'), db_name,
+            'galatea', 'tutorial', filename[0:2], filename[2:4], filename)
+
+        value = None
+        try:
+            with open(filename, 'rb') as file_p:
+                value = buffer(file_p.read())
+        except IOError:
+            pass
+        return value
+
+    def get_thumb_path(self, name):
+        filename = self.thumb_filename
+        if not filename:
+            return None
+        return '%s/%s/%s' % (filename[:2], filename[2:4], filename)
+
+    @classmethod
+    def set_thumb(cls, tutorials, name, value):
+        if value is None:
+            return
+
+        Config = Pool().get('galatea.configuration')
+        galatea_config = Config(1)
+        size = galatea_config.tutorial_thumb_size or 300
+        crop = galatea_config.tutorial_thumb_crop
+        db_name = Transaction().cursor.dbname
+        galatea_dir = os.path.join(
+            config.get('database', 'path'), db_name, 'galatea', 'tutorial')
+
+        for tutorial in tutorials:
+            file_name = tutorial['thumb_filename']
+
+            file_mime, _ = guess_type(file_name)
+            if not file_mime:
+                cls.raise_user_error('not_file_mime', {
+                        'file_name': file_name,
+                        })
+            if file_mime not in IMAGE_TYPES:
+                cls.raise_user_error('not_file_mime_image', {
+                        'file_name': file_name,
+                        })
+
+            _, ext = file_mime.split('/')
+            digest = '%s.%s' % (hashlib.md5(value).hexdigest(), ext)
+            subdir1 = digest[0:2]
+            subdir2 = digest[2:4]
+            directory = os.path.join(galatea_dir, subdir1, subdir2)
+            filename = os.path.join(directory, digest)
+
+            thumb = thumbly(directory, filename, value, size, crop)
+            if not thumb:
+                cls.raise_user_error('not_file_mime_image', {
+                        'file_name': file_name,
+                        })
+            cls.write([tutorial], {
+                'thumb_filename': digest,
+                })
 
 
 class GalateaTutorialWebSite(ModelSQL):
