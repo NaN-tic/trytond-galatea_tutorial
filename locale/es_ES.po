@@ -3,12 +3,32 @@ msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "error:galatea.tutorial:"
+msgid "\"%(file_name)s\" file mime is not an image (jpg, png or gif)"
+msgstr "El \"%(file_name)s\" no es una imagen (jpg, png or gif)"
+
+msgctxt "error:galatea.tutorial:"
+msgid "Not know file mime \"%(file_name)s\""
+msgstr "No se conoce el tipo de fichero \"%(file_name)s\""
+
+msgctxt "error:galatea.tutorial:"
+msgid "Thumb \"%(file_name)s\" size is larger than \"%(size)s\"Kb"
+msgstr "El tamaño de la miniatura \"%(file_name)s\" es más grande que \"%(size)s\"Kb"
+
+msgctxt "error:galatea.tutorial:"
 msgid ""
 "You can not delete tutorials because you will get error 404 NOT Found. "
 "Dissable active field."
 msgstr ""
 "No puede eliminar tutoriales para evitar el error 404 NOT Fount. "
 "Desactivalo."
+
+msgctxt "field:galatea.configuration,tutorial_thumb_crop:"
+msgid "Tutorial Thumb Crop"
+msgstr "Cortar miniatura tutorial"
+
+msgctxt "field:galatea.configuration,tutorial_thumb_size:"
+msgid "Tutorial Thumb Size"
+msgstr "Tamaño miniatura tutorial"
 
 msgctxt "field:galatea.tutorial,active:"
 msgid "Active"
@@ -77,6 +97,18 @@ msgstr "slug"
 msgctxt "field:galatea.tutorial,slug_langs:"
 msgid "Slug Langs"
 msgstr "Slug idiomas"
+
+msgctxt "field:galatea.tutorial,thumb:"
+msgid "Thumb"
+msgstr "Miniatura"
+
+msgctxt "field:galatea.tutorial,thumb_filename:"
+msgid "File Name"
+msgstr "Nombre fichero"
+
+msgctxt "field:galatea.tutorial,thumb_path:"
+msgid "Thumb Path"
+msgstr "Ruta miniatura"
 
 msgctxt "field:galatea.tutorial,total_comments:"
 msgid "Total Comments"
@@ -198,6 +230,14 @@ msgctxt "field:galatea.website,tutorial_comment:"
 msgid "Tutorial Comments"
 msgstr "Comentarios tutorial"
 
+msgctxt "help:galatea.configuration,tutorial_thumb_crop:"
+msgid "Crop Thumb Tutorial Image"
+msgstr "Cortar miniatura tutorial"
+
+msgctxt "help:galatea.configuration,tutorial_thumb_size:"
+msgid "Thumbnail Tutorial Image Size (width x height)"
+msgstr "Tamaño imagen miniatura tutorial (ancho x alto)"
+
 msgctxt "help:galatea.tutorial,active:"
 msgid "Dissable to not show content tutorial."
 msgstr "Desactivar para no mostrar el contenido del tutorial."
@@ -243,6 +283,10 @@ msgstr "Separado con la coma."
 msgctxt "help:galatea.tutorial,slug:"
 msgid "Cannonical uri."
 msgstr "Cannonical uri."
+
+msgctxt "help:galatea.tutorial,thumb_filename:"
+msgid "Thumbnail File Name"
+msgstr "Nombre miniatura"
 
 msgctxt "help:galatea.tutorial,websites:"
 msgid "Tutorial will be available in those websites"
