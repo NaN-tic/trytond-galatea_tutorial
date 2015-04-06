@@ -18,7 +18,8 @@ __all__ = ['GalateaTutorial', 'GalateaTutorialWebSite', 'GalateaTutorialComment'
 class GalateaTutorial(ModelSQL, ModelView):
     "Galatea Tutorial"
     __name__ = 'galatea.tutorial'
-    name = fields.Char('Name', required=True, on_change=['name', 'slug'])
+    name = fields.Char('Name', required=True, translate=True,
+        on_change=['name', 'slug'])
     slug = fields.Char('slug', required=True, translate=True,
         help='Cannonical uri.')
     slug_langs = fields.Function(fields.Dict(None, 'Slug Langs'), 'get_slug_langs')
