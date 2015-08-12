@@ -32,9 +32,9 @@ this repository contains the full copyright notices and license terms. -->
             <label name="comment"/>
             <field name="comment"/>
             <label name="tutorial_create_date"/>
-            <field name="tutorial_create_date"/>
+            <field name="tutorial_create_date" widget="date"/>
             <label name="tutorial_write_date"/>
-            <field name="tutorial_write_date"/>
+            <field name="tutorial_write_date" widget="date"/>
         </page>
         <page string="Websites" id="websites">
             <field name="websites" colspan="6"/>
