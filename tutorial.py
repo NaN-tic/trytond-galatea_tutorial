@@ -161,7 +161,7 @@ class GalateaTutorial(ModelSQL, ModelView):
         return len(self.comments)
 
     def get_thumb(self, name):
-        db_name = Transaction().cursor.dbname
+        db_name = Transaction().database.name
         filename = self.thumb_filename
         if not filename:
             return None
@@ -191,7 +191,7 @@ class GalateaTutorial(ModelSQL, ModelView):
         galatea_config = Config(1)
         size = galatea_config.tutorial_thumb_size or 300
         crop = galatea_config.tutorial_thumb_crop
-        db_name = Transaction().cursor.dbname
+        db_name = Transaction().database.name
         galatea_dir = os.path.join(
             config.get('database', 'path'), db_name, 'galatea', 'tutorial')
 
